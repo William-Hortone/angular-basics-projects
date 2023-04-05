@@ -1,0 +1,14 @@
+<mat-form-field
+  appearance="fill"
+  fxLayout="column"
+  fxLayoutAlign="center stretch"
+>
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    [value]="inputValue"
+    placeholder="{{ placeholder }}"
+    [(ngModel)]="value"
+  />
+</mat-form-field>
+<!-- <p>the value is : {{ field }}</p> -->

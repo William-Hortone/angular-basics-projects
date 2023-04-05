@@ -1,0 +1,77 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <form [formGroup]="myReactiveForm" fxFlexAlign="center center" fxFlex="500px">
+    <mat-card>
+      <mat-card-header fxLayout="row" fxLayoutAlign="center center">
+        <mat-card-title>Sing in to papAi</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="column">
+          <div>
+            <app-form-input
+              label="Username"
+              [placeholder]="namePlaceholder"
+              formControlName="username"
+              [inputValue]="myInputValue"
+            >
+            </app-form-input>
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+            <app-form-input
+              label="Name"
+              [placeholder]="usernamePlaceholder"
+              formControlName="name"
+              [inputValue]="myInputValue"
+            >
+            </app-form-input>
+            <app-form-input
+              label="First Name"
+              [placeholder]="firstNamePlaceholder"
+              formControlName="firstName"
+              [inputValue]="myInputValue"
+            >
+            </app-form-input>
+          </div>
+          <div>
+            <app-form-input
+              label="Email"
+              [placeholder]="emailPlaceholder"
+              formControlName="email"
+              [inputValue]="myInputValue"
+            >
+            </app-form-input>
+          </div>
+          <div>
+            <app-form-input
+              label="password"
+              [placeholder]="usernamePlaceholder"
+              formControlName="password"
+              class="full-width"
+              [inputValue]="myInputValue"
+            >
+            </app-form-input>
+            <label for="remember">Remember me</label>
+            <input
+              #rememberMe
+              type="checkbox"
+              id="remember"
+              formControlName="remember"
+              [value]="status"
+            />
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
+        <button
+          (click)="OnSend(myReactiveForm)"
+          fxFlex="150px"
+          type="button"
+          mat-raised-button
+          color="primary"
+        >
+          Send
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>
