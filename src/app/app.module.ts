@@ -12,7 +12,6 @@ import {MatCardModule} from '@angular/material/card'
 import {MatButtonModule} from '@angular/material/button';
 import {LayoutModule} from '@angular/cdk/layout';
 import { FlexLayoutModule } from "@angular/flex-layout";
-// import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -32,9 +31,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MatButtonModule,
     LayoutModule,
     FlexLayoutModule,
-    // FlexLayoutModule,
-    // MatGridListModule,
-    // MatInputModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
