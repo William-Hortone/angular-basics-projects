@@ -31,28 +31,6 @@ export class AppComponent  {
     //   firstName:new FormControl(null),
     //   remember:new FormControl(null),
     // });
-  // onSubmit(){
-  //   console.log(this.myReactiveForm);
-
-  //   const data:User = {
-
-  //     username:"",
-  //     password: "",
-  //     email:"",
-  //     name:"",
-  //     firstName: "",
-  //     remember:true,
-  //   }
-  // }
-
-  // myInputValue = ''
-  // status:true; 
-
-  // OnSend(myReactiveForm){
-  //   const submitMyForm = new SubmitForm();
-  //   submitMyForm.OnSubmitForm(this.myReactiveForm, this.myInputValue);
-  //   this.myInputValue =""
-  // }
 
 
   myReactiveForm: FormGroup;
@@ -72,15 +50,15 @@ export class AppComponent  {
   }
 
   onSubmit() {
-    if (this.myReactiveForm.valid){
+    // if (this.myReactiveForm.valid){
       const formData = this.myReactiveForm.value;
-    const success = this.SubmitFormService.handleService(formData);
+      const success = this.SubmitFormService.handleService();
 
      if (success === true) {
        console.log(this.myReactiveForm.value); 
       this.myReactiveForm.reset();
       }
-    }
+    // }
 }
 
 }

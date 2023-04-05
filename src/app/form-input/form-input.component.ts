@@ -48,13 +48,5 @@ export class FormInputComponent implements ControlValueAccessor, OnInit {
   writeValue(value: any){
     this.value = value
   }
-  // setDisabledState?(isDisabled: boolean): void {
 
-  // }
-
-
-//   OnSend(){
-//     const submitMyForm = new SubmitForm();
-//     submitMyForm.OnSubmitForm(this.title)
-//   }
 }
