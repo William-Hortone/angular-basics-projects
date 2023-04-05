@@ -11,7 +11,6 @@
               label="Username"
               [placeholder]="namePlaceholder"
               formControlName="username"
-              [inputValue]="myInputValue"
             >
             </app-form-input>
           </div>
@@ -21,14 +20,12 @@
               label="Name"
               [placeholder]="usernamePlaceholder"
               formControlName="name"
-              [inputValue]="myInputValue"
             >
             </app-form-input>
             <app-form-input
               label="First Name"
               [placeholder]="firstNamePlaceholder"
               formControlName="firstName"
-              [inputValue]="myInputValue"
             >
             </app-form-input>
           </div>
@@ -37,7 +34,6 @@
               label="Email"
               [placeholder]="emailPlaceholder"
               formControlName="email"
-              [inputValue]="myInputValue"
             >
             </app-form-input>
           </div>
@@ -47,7 +43,6 @@
               [placeholder]="usernamePlaceholder"
               formControlName="password"
               class="full-width"
-              [inputValue]="myInputValue"
             >
             </app-form-input>
             <label for="remember">Remember me</label>
@@ -56,14 +51,13 @@
               type="checkbox"
               id="remember"
               formControlName="remember"
-              [value]="status"
             />
           </div>
         </div>
       </mat-card-content>
       <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
         <button
-          (click)="OnSend(myReactiveForm)"
+          (click)="onSubmit()"
           fxFlex="150px"
           type="button"
           mat-raised-button

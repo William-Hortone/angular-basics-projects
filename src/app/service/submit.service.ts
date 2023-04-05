@@ -1,7 +1,11 @@
-export class SubmitForm{
-    OnSubmitForm(data:any, inputValue: any){
-        alert('Saved success')
-        console.log(data);
-        inputValue = "";
+import { Injectable } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SubmitFormService {
+    handleService(formData:any): boolean {
+      return true;
     }
 }

@@ -4,11 +4,6 @@
   fxLayoutAlign="center stretch"
 >
   <mat-label>{{ label }}</mat-label>
-  <input
-    matInput
-    [value]="inputValue"
-    placeholder="{{ placeholder }}"
-    [(ngModel)]="value"
-  />
+  <input matInput placeholder="{{ placeholder }}" [(ngModel)]="value" />
 </mat-form-field>
 <!-- <p>the value is : {{ field }}</p> -->

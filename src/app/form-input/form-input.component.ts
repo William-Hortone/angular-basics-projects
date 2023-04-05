@@ -1,6 +1,6 @@
 import { Component, OnInit,forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { SubmitForm} from "../service/submit.service"
+// import { SubmitForm} from "../service/submit.service"
 
 @Component({
   selector: 'app-form-input',
@@ -23,7 +23,7 @@ export class FormInputComponent implements ControlValueAccessor, OnInit {
 
   @Input() label: string;
   @Input() placeholder: string;
-  @Input() inputValue: string;
+
 
   field: string;
 
