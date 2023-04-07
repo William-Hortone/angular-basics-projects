@@ -26,7 +26,6 @@ export class AppComponent  {
   myReactiveForm: FormGroup;
   myMessage: string;
 
-  // constructor(private myService: MyService) { }
   constructor(
     private formBuilder: FormBuilder,
     private SubmitFormService: SubmitFormService
@@ -40,47 +39,23 @@ export class AppComponent  {
       remember:new FormControl(null),
     });
   }
-
-  ngOnInit(){
+  ngOnInit() {
     this.SubmitFormService.currentMessage.subscribe(message => this.myMessage = message);
   }
-
-  onSubmit(){
-    this.SubmitFormService.changeMessage(" succes completed")
-    alert(this.myMessage)
-  }
-
-
-
-
-
-
-
-
-
-
-
-  // private mySubscription: Subscription;
-
-  // currentMessage = messageSource.asObservable(); 
-//   ngOnInit() {
-//     this.SubmitFormService.currentMessage.subscribe(message => this.myMessage = message);
-//   }
   
-//   onSubmit() {
-//     //   const formData = this.myReactiveForm.value;
-//     //   const success = this.SubmitFormService.handleService();
+  onSubmit() {
+    //   const formData = this.myReactiveForm.value;
+    //   const success = this.SubmitFormService.handleService();
 
-//     //  if (success === true) {
-//     //    console.log(this.myReactiveForm.value); 
-//     //   this.myReactiveForm.reset();
-//     //   }
+    //  if (success === true) {
+    //    console.log(this.myReactiveForm.value); 
+    //   this.myReactiveForm.reset();
+    //   }
 
-//     this.SubmitFormService.changeMessage('Login successful!');
+    this.SubmitFormService.changeMessage('Login successful!');
     
-//    console.log(this.myMessage)
-// }
+   console.log(this.myMessage)
+}
 
 }
 
-// i Created a reactive form in angular and a service. now i want to add a behaviorSubject to my service and i need to subscribe in my app component to this behaviorSubject. Then when i click login the service needs to sends data through his behaviorSubject to the app as success message

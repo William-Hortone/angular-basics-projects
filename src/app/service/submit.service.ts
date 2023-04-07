@@ -10,8 +10,6 @@ export class SubmitFormService {
   private messageSource = new BehaviorSubject<string>('');
   currentMessage = this.messageSource.asObservable(); 
 
-
-
   // ! Method to update the behaviorSubject
   changeMessage(message: string) {
     this.messageSource.next(message);
