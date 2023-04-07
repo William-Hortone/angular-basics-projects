@@ -24,7 +24,7 @@ export class AppComponent  {
   emailPlaceholder: string = "Your email";
 
   myReactiveForm: FormGroup;
-  message: string;
+  myMessage: string;
 
   // constructor(private myService: MyService) { }
   constructor(
@@ -40,25 +40,46 @@ export class AppComponent  {
       remember:new FormControl(null),
     });
   }
+
+  ngOnInit(){
+    this.SubmitFormService.currentMessage.subscribe(message => this.myMessage = message);
+  }
+
+  onSubmit(){
+    this.SubmitFormService.changeMessage(" succes completed")
+    alert(this.myMessage)
+  }
+
+
+
+
+
+
+
+
+
+
+
   // private mySubscription: Subscription;
 
   // currentMessage = messageSource.asObservable(); 
-  ngOnInit() {
-    this.SubmitFormService.currentMessage.subscribe(message => this.message = message);
-  }
+//   ngOnInit() {
+//     this.SubmitFormService.currentMessage.subscribe(message => this.myMessage = message);
+//   }
+  
+//   onSubmit() {
+//     //   const formData = this.myReactiveForm.value;
+//     //   const success = this.SubmitFormService.handleService();
 
-  onSubmit() {
-    //   const formData = this.myReactiveForm.value;
-    //   const success = this.SubmitFormService.handleService();
+//     //  if (success === true) {
+//     //    console.log(this.myReactiveForm.value); 
+//     //   this.myReactiveForm.reset();
+//     //   }
 
-    //  if (success === true) {
-    //    console.log(this.myReactiveForm.value); 
-    //   this.myReactiveForm.reset();
-    //   }
-    this.SubmitFormService.changeMessage('Login successful!');
+//     this.SubmitFormService.changeMessage('Login successful!');
     
-   console.log(this.message)
-}
+//    console.log(this.myMessage)
+// }
 
 }
 
